@@ -23,6 +23,7 @@
     <string name="edit_picto">editar_picto</string>
     <string name="delete_pictos_mode">modo de borrado de pictos</string>
     <string name="title_activity_picto_search">PictoSearchActivity</string>
+    <string name="title_activity_add_cat">AddCatActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

@@ -29,6 +29,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.pictopocketiv.search.PictoSearchFragment" />
         </activity>
+        <!--- === ADD CAT === -->
+        <activity
+            android:name=".AddCatActivity"
+            android:exported="false"
+            android:label="@string/title_activity_add_cat"
+            android:theme="@style/Theme.PictoPocketIV.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pictopocketiv.addCat.AddCatFragment" />
+        </activity>
         <!-- ==== PICTO VISOR ==== -->
         <activity
             android:name=".PictoVisorActivity"

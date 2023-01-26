@@ -38,8 +38,7 @@
             android:id="@+id/actions_menu_add_1_btn"
             style="@style/AddActionToolsButton"
             android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+            android:layout_height="48dp" />
 
     </LinearLayout>
 
