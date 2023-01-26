@@ -1,0 +1,154 @@
+
+
+src = https://arasaac.org/pictograms/search/categorizaci%C3%B3n?offset=0&tab=0
+src =
+
+0.Emocion: 37998
+	sopresa: 35592
+	asco: 30964
+	vergüenza: 25823
+	aburrido: 35531
+	alegre:35533
+	asustado: 35535
+	confuso: 6992
+	enfadado: 7039
+	triste: 35545
+	distraido: 8552
+	preocupado: 26928
+	curioso: 27706
+	tranquilo: 31310
+	desanimado: 32328
+	enfadado: 35539
+	nervioso: 30391
+	cansado: 6959
+	contento: 35547
+
+1.verbos habituales: drawable acciones
+	caminar: 6044
+	despertar: 8989
+	vivir: 11605
+	lavar: 8977
+	desnudar: 11233
+	duchar: 26803
+	hacer caca: 35347
+	vestir: 6627
+	beber: 6061
+	dormir: 6479
+	hacer pis: 16713
+	peinar:26947
+	secar: 2566
+	bañar: 6058
+	comer: 6456
+2.comer: 6456
+	comida: 4610
+	chorizo: 2335
+	lechuga: 2446
+	melocoton: 2468
+	patatas fritas: 2505
+	piña: 2525
+	pollo: 2534
+	salchichas: 2555
+	sandia: 2557
+	almendras: 2646
+	pan de molde: 2865
+	tostada: 2787
+	nuez: 2880
+	kiwi: 2955
+	jamon de york: 2963
+	uvas: 3247
+	pistachos: 3372
+	sandwich: 3383
+	hortalizas: 6244
+	hortalizas: 7130
+	ketchupt: 6540
+	mostaza: 6565
+	pescado: 6653
+	carne: 6961
+	maiz: 7150
+	aguacate: 8009
+3.Beber: 6061
+	bebida: 4575
+	granizado: 38470
+	agua con gas: 38420
+	te: 38312
+	te helado: 37734
+	isotonica: 32830
+	cafe: 24479
+	chocolate a la taza: 21326
+	zumo de uva: 11405
+	zumo de manzana: 11403
+	zumo de melocoton: 3248
+	zumo de naranja: 2624
+	zumo de piña: 2625
+	naranjada: 6569
+	limonada: 6551
+	colacao: 4940
+	agua: 2248
+	cocacola: 2338
+	leche: 2445
+	leche y galletas
+4.Actividades: 24699
+	tablet: 33052
+	lecto escritura: 22789
+	manualidades: 7794
+	dibujo: 11238
+	estudiar: 2387
+	crucigrama: 5698
+	pintar: 7202
+	encajar: 8102
+	agrupar: 10139
+	copiar: 21559
+	ordenar: 25282
+	ordenador: 7190
+	movil: 25296
+	televisor: 25498
+	juguetes: 32568
+	deporte:7010
+
+5.lugares: 32598
+	jardin: 2434
+	parada autobus: 2499
+	campo: 2683
+	fuente: 3274
+	ludoteca: 4689
+	cuarto de baño: 6929
+	cuarto de baño: 6930
+	terraza: 22129
+	cocina: 33070
+	dormitorio: 33068
+	salon: 33074
+	calefaccion: 34872
+	parque infantil: 36145
+	terraza: 38461
+	escalera mecanica: 21830
+	noria: 4704
+	compra: 9058
+
+6.Gustosidades: 1111
+	chocolate: 2334
+	chupachup: 2701
+	lacasitos: 28305
+	donut: 2368
+	piruleta: 2832
+	churros: 3262
+	flan: 3317
+	galleta de chocolate: 3331
+	sobaos: 4792
+	maiz: 4879
+	ganchitos: 24555
+	bolsa de fritos: 5400
+	natilla: 6644
+	gominolas: 7118
+	perrito caliente: 7201
+	nocilla: 7763
+
+
+0.Emocion: 35592, 30964, 25823, 35531, 35533, 35535, 6992, 7039, 35545, 8552, 26928, 27706, 31310, 32328, 35539, 30391, 6959, 35547
+1.verbos_habituales: 6044, 8989, 11605, 8977, 11233, 26803, 35347, 6627, 6061, 6479, 16713, 26947, 2566, 6058, 6456
+2.comer: 4610, 2335, 2446, 2468, 2505, 2525, 2534, 2555, 2557, 2646, 2865, 2787, 2880, 2955, 2963, 3247, 3372, 3383, 6244, 7130, 6540, 6565, 6653, 6961, 7150, 8009
+3.Beber: 4575, 38470, 38420, 38312, 37734, 32830, 24479, 21326, 11405, 11403, 3248, 2624, 2625, 6569, 6551, 4940, 2248, 2338, 2445
+4.Actividades: 33052, 22789, 7794, 11238, 2387, 5698, 7202, 8102, 10139, 21559, 25282, 7190, 25296, 25498, 32568, 7010
+5.lugares: 2434, 2499, 2683, 3274, 4689, 6929, 6930, 22129, 33070, 33068, 33074, 34872, 36145, 38461, 21830, 4704, 9058
+6.Gustosidades: 2334, 2701, 28305, 2368, 2832, 3262, 3481, 3498, 3500, 3501, 3516, 3518, 3519, 3522, 3523, 3524, 3525, 3527, 3528, 3529, 3530, 3531, 3533, 3534, 3535, 3536, 3537, 3538, 3539, 3540, 3541, 3542, 3543, 3544, 35
+
+

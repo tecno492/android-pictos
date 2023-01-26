@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1061845233424",
+    "project_id": "pictoauth",
+    "storage_bucket": "pictoauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061845233424:android:5947e1865b0d8e57da7f95",
+        "android_client_info": {
+          "package_name": "com.example.pictopocketiv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061845233424-faja5regrop8g7lp1bk6afiqfj6rdoc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfyFxBIz-W-DUSiajvZGVnmqQ5HuTHSPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061845233424-faja5regrop8g7lp1bk6afiqfj6rdoc9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- ==== APP ==== -->
+    <string name="app_name">PictoPocket 0.1</string>
+    <!-- Options menu -->
+    <string name="close_sesion">Cerrar sesión</string>
+    <string name="open_sesion">Abrir sesión (fk)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="access_title">Accesso</string>
+    <string name="your_email">Tu e-mail</string>
+    <string name="your_password">Tu contraseña</string>
+    <string name="access">acceder</string>
+    <string name="fake_email_address">qqq@qqqq.com</string>
+    <string name="register">Registro</string>
+    <string name="register_form_title">Registro</string>
+    <string name="error">Error</string>
+    <string name="understanded">entendido</string>
+    <string name="fake_error_msg">Mensaje de error</string>
+
+    <string name="search_in_arasaac">buscar en arasaac</string>
+    <string name="use_camera">usar la camara</string>
+    <string name="edit_picto">editar_picto</string>
+    <string name="delete_pictos_mode">modo de borrado de pictos</string>
+    <string name="title_activity_picto_search">PictoSearchActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/app_opts_open_sesion"
+        android:title="@string/open_sesion" />
+    <item
+        android:id="@+id/app_opts_close_sesion"
+        android:title="@string/close_sesion" />
+</menu>

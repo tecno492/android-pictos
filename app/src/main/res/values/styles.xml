@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="form_txt_field">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="form_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textColor">@color/secondaryLightColor</item>
+    </style>
+
+    <style name="form_error">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textColor">@color/errorColor</item>
+    </style>
+
+    <style name="form_card">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:layout_marginBottom">32dp</item>
+    </style>
+
+    <style name="form_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">64dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+    <!-- Dashed border -->
+    <style name="dashed_border_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/dashed_border</item>
+    </style>
+
+    <style name="dashed_border_style_primary_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/dashed_border_primary_bg</item>
+    </style>
+
+
+    <style name="ActionToolsButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/action_tools_btn_background</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="SearchActionToolsButton" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_search_secondary_light</item>
+        <item name="android:contentDescription">@string/search_in_arasaac</item>
+    </style>
+
+    <style name="SearchActionToolsButtonActive" parent="SearchActionToolsButton">
+        <item name="android:background">@drawable/action_tools_btn_background_active</item>
+        <item name="android:src">@drawable/ic_search_secondary_light_accent</item>
+    </style>
+
+    <style name="CameraActionToolsButton" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_camera_secondary_light</item>
+        <item name="android:contentDescription">@string/use_camera</item>
+    </style>
+
+    <style name="EditActionToolsButton" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_edit_secondary_light</item>
+        <item name="android:contentDescription">@string/edit_picto</item>
+    </style>
+
+    <style name="RemoveActionToolsButton" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_delete_secondary_light</item>
+        <item name="android:contentDescription">@string/delete_pictos_mode</item>
+    </style>
+    <style name="RemoveActionToolsButtonActive" parent="ActionToolsButton">
+        <item name="android:background">@drawable/action_tools_btn_background_active</item>
+        <item name="android:src">@drawable/ic_delete_secondary_light_active</item>
+    </style>
+
+    <style name="DenyActionToolsButton" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_deny_secondary_light</item>
+        <item name="android:contentDescription">@string/delete_pictos_mode</item>
+    </style>
+    <style name="DenyActionToolsButtonActive" parent="ActionToolsButton">
+        <item name="android:background">@drawable/action_tools_btn_background_active</item>
+        <item name="android:src">@drawable/ic_deny_secondary_light_accent</item>
+    </style>
+    <style name="LockActionToolsButton" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_locked_secondary_light</item>
+        <item name="android:contentDescription">@string/lock_actions</item>
+    </style>
+    <style name="LockActionToolsButtonUltralight" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_locked_secondary_light</item>
+        <item name="android:background">@drawable/action_tools_btn_background_ultra_light</item>
+        <item name="android:contentDescription">@string/lock_actions</item>
+        <item name="android:alpha">0.5</item>
+    </style>
+
+
+    <style name="AddActionToolsButton" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_add_secondary_light</item>
+        <item name="android:contentDescription">@string/lock_actions</item>
+    </style>
+    <style name="AddActionToolsButtonUltralight" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_add_secondary_light</item>
+        <item name="android:background">@drawable/action_tools_btn_background_ultra_light</item>
+        <item name="android:contentDescription">@string/lock_actions</item>
+        <item name="android:alpha">0.5</item>
+    </style>
+
+
+    <style name="ActionsMenuButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/transparent_w50h50</item>
+        <item name="android:src">@drawable/ic_locked_secondary_ultra_light</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="ActionsMenuArrowUpButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/btn_background_accent_ultra_light</item>
+        <item name="android:src">@drawable/ic_menu_actions_arrow_up_24</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:alpha">0.5</item>
+    </style>
+
+    <style name="ActionsMenuArrowDownButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/transparent_w50h50</item>
+        <item name="android:src">@drawable/ic_menu_actions_arrow_down_24</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="ArrowBackButton" parent="Widget.AppCompat.Button">
+        <item name="android:src">@drawable/left_arrow_h50</item>
+        <item name="android:background">@drawable/dashed_border_primary_bg</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+
+    <style name="SendButton" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_send_24</item>
+        <item name="android:contentDescription">@string/send</item>
+    </style>
+
+    <style name="SaveButton" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_save_24</item>
+        <item name="android:contentDescription">@string/save</item>
+    </style>
+
+    <style name="CancelButton" parent="ActionToolsButton">
+        <item name="android:src">@drawable/ic_cancel_24</item>
+        <item name="android:contentDescription">@string/cancel</item>
+    </style>
+
+    <style name="customDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+
+    <string name="lock_actions">bloquear acciones</string>
+    <string name="send">enviar</string>
+    <string name="save" />
+    <string name="cancel">cancelar</string>
+</resources>

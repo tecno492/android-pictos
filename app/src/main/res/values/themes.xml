@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PictoPocketIV" parent="Theme.AppCompat.Light">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/accent_material_light</item>
+        <!-- Overflow button -->
+        <item name="android:actionOverflowButtonStyle">@style/overflowButton</item>
+        <!-- Action bar -->
+        <item name="actionBarStyle">@style/customActionBar</item>
+    </style>
+
+    <!-- Overflow button custom style -->
+    <style name="overflowButton" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_overflow_light</item>
+    </style>
+
+    <!-- Action bar custom style -->
+    <style name="customActionBar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="titleTextStyle">@style/ActionBarTitleTextStyle</item>
+    </style>
+
+    <!-- Action bar title custom style -->
+    <style name="ActionBarTitleTextStyle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/primaryTextLightColor</item>
+    </style>
+
+    <style name="Theme.PictoPocketIV.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.PictoPocketIV.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.PictoPocketIV.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
