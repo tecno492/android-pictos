@@ -12,6 +12,16 @@
         android:orientation="vertical">
 
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/result_list_recv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_add_result">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

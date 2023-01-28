@@ -1,5 +1,12 @@
 package com.example.pictopocketiv.addCat;
 
+
+import android.content.Context;
+import android.content.res.AssetManager;
+
+import com.google.gson.Gson;
+
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,19 +17,20 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pictopocketiv.R;
 import com.example.pictopocketiv.arasaac.ArasaacModel;
 import com.example.pictopocketiv.arasaac.ArasaacService;
 import com.example.pictopocketiv.catalogs.PictosCategoriesAdapter;
-import com.example.pictopocketiv.localpersistence.LocalPersistenceService;
+
 import com.example.pictopocketiv.localpersistence.PictosPersistenceModel;
+
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+
 
 public class AddCatResultAdapter extends RecyclerView.Adapter<AddCatResultAdapter.ResultViewHolder> {
 
@@ -80,7 +88,7 @@ public class AddCatResultAdapter extends RecyclerView.Adapter<AddCatResultAdapte
     @Override
     public ResultViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Inflates the item view
-        View itemView = mInflater.inflate(R.layout.item_search_result,
+        View itemView = mInflater.inflate(R.layout.item_add_result,
                 parent, false);
 
         // Create & return the ViewHolder
@@ -110,8 +118,9 @@ public class AddCatResultAdapter extends RecyclerView.Adapter<AddCatResultAdapte
         // ==== On Save
         holder.mSave.setOnClickListener(view -> {
 
-            // ==== Opens category selection dialog
 
+            // ==== Opens category selection dialog
+            /*
             // Dialog Listener
             AddCatCategoryDialogFragment.OnDialogListener onDialogListener =
                     new AddCatCategoryDialogFragment.OnDialogListener() {
@@ -146,7 +155,7 @@ public class AddCatResultAdapter extends RecyclerView.Adapter<AddCatResultAdapte
             // Sets the dialog style
             mDialogFragment.setStyle(DialogFragment.STYLE_NORMAL, R.style.customDialogStyle);
             // Shows the dialog
-            mDialogFragment.show(mActivity.getSupportFragmentManager(),"");
+            mDialogFragment.show(mActivity.getSupportFragmentManager(),"");*/
         });
     }
 
@@ -168,7 +177,6 @@ public class AddCatResultAdapter extends RecyclerView.Adapter<AddCatResultAdapte
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 
     private void setKeywordUI(ArasaacModel.Pictogram pictogram, @NonNull ResultViewHolder holder) {

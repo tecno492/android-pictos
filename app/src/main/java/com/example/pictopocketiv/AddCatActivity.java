@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-import com.example.pictopocketiv.search.PictoSearchFragment;
+import com.example.pictopocketiv.addCat.AddCatFragment;
 
 public class AddCatActivity extends AppCompatActivity {
 
@@ -52,7 +52,7 @@ public class AddCatActivity extends AppCompatActivity {
     }
 
     private void setFrames() {
-        PictoSearchFragment mSearchFragment = PictoSearchFragment.newInstance(this);
+        AddCatFragment mSearchFragment = AddCatFragment.newInstance(this);
         FragmentTransaction ft = mFramesManager.beginTransaction();
         ft.replace(R.id.search_fragment_container, mSearchFragment);
         ft.addToBackStack(null);
