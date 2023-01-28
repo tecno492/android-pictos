@@ -124,7 +124,7 @@ public class AddCatResultAdapter extends RecyclerView.Adapter<AddCatResultAdapte
 
             JsonManipulation Json = new JsonManipulation();
             try {
-                Json.JsonFromFile("welcome_pictos_bundle.json", mActivity);
+                Json.crearCat("welcome_pictos_bundle.json", mActivity, p);
                 //Json.crearCategoria(p);
             } catch (IOException e) {
                 e.printStackTrace();

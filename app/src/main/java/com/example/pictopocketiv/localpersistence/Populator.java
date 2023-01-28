@@ -15,7 +15,7 @@ import java.util.concurrent.ExecutionException;
 
 public class Populator {
 
-    private static class CategorizedPictos {
+    public static class CategorizedPictos {
 
         public int cat;
         public int[] ids;

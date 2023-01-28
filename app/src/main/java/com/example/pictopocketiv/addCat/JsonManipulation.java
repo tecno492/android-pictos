@@ -13,15 +13,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
 
 public class JsonManipulation {
-    public Populator.CategorizedPictosList pictoCats;
+    public Populator.CategorizedPictosList pictos;
 
-    public void JsonFromFile(String filePath, Context context) throws IOException, JSONException {
+    public void crearCat(String filePath, Context context, ArasaacModel.Pictogram p) throws IOException, JSONException {
 
         AssetManager assman = context.getAssets();
         InputStream istream = null;
@@ -32,9 +33,10 @@ public class JsonManipulation {
         BufferedReader buffReader = new BufferedReader(new InputStreamReader(istream));
         StringBuilder strBuilder = new StringBuilder();
         String line;
-        while ((line = buffReader.readLine()) != null ) {
+        while ((line = buffReader.readLine()) != null) {
             strBuilder.append(line);
         }
+        buffReader.close();
 
         String jsonStr = strBuilder.toString();
 
@@ -44,27 +46,22 @@ public class JsonManipulation {
         Gson gson = new Gson();
         Populator.CategorizedPictosList pictos = gson.fromJson(jsonStr, Populator.CategorizedPictosList.class);
 
+        System.out.println(pictos.pictoCats.get(pictos.pictoCats.size() - 1).cat);
 
-        this.pictoCats = pictos;
+        Populator.CategorizedPictos new_cat = new Populator.CategorizedPictos(pictos.pictoCats.get(pictos.pictoCats.size() - 1).cat + 1, new int[]{(p.id)}, p.keywords.get(0).keyword, p.id, "");
+        System.out.println(new_cat);
+
+        pictos.pictoCats.add(new_cat);
+        System.out.println(pictos.pictoCats.get(pictos.pictoCats.size() - 1));
+
+        FileWriter writer = new FileWriter(filePath);
+        writer.write(String.valueOf(pictos));
+        writer.close();
     }
 
 
-/*
+
     public void crearCategoria( ArasaacModel.Pictogram p) throws JSONException {
-        JSONObject nuevaCategoria = new JSONObject();
-        int ultimoCat = 0;
-        if (pictoCats.length() > 0) {
-            ultimoCat = pictoCats.getJSONObject(pictoCats.length() - 1).getInt("cat") +1;
-        }
-        try {
-            nuevaCategoria.put("cat", ultimoCat);
-            nuevaCategoria.put("label", p.keywords);
-            nuevaCategoria.put("pictoId", p.id);
-            nuevaCategoria.put("drawable", "");
-            nuevaCategoria.put("ids", new JSONArray(p.id));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        pictoCats.put(nuevaCategoria);
-    }*/
+
+    }
 }
