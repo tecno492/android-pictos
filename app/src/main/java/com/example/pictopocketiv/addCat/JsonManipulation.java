@@ -1,66 +1,70 @@
 package com.example.pictopocketiv.addCat;
 
 
+import android.content.Context;
+import android.content.res.AssetManager;
+
+import com.example.pictopocketiv.arasaac.ArasaacModel;
+import com.example.pictopocketiv.localpersistence.Populator;
+import com.google.gson.Gson;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 
 public class JsonManipulation {
-    public JSONArray pictoCats;
+    public Populator.CategorizedPictosList pictoCats;
 
-    public void JsonFromFile(String filePath) throws IOException, JSONException {
-        // Crea un nuevo objeto JSONArray
-        JSONArray jsonArray = null;
+    public void JsonFromFile(String filePath, Context context) throws IOException, JSONException {
+
+        AssetManager assman = context.getAssets();
+        InputStream istream = null;
 
         // Crea una nueva instancia de File para el archivo JSON
-        File jsonFile = new File(filePath);
+        istream = assman.open("welcome_pictos_bundle.json");
 
-        // Crea un nuevo BufferedReader para leer el archivo JSON
-        BufferedReader reader = new BufferedReader(new FileReader(jsonFile));
-
-        // Crea una cadena vacía para almacenar el contenido del archivo JSON
-        StringBuilder stringBuilder = new StringBuilder();
-
-        // Lee cada línea del archivo JSON y la agrega a la cadena vacía
-        String line = reader.readLine();
-        while (line != null) {
-            stringBuilder.append(line);
-            line = reader.readLine();
+        BufferedReader buffReader = new BufferedReader(new InputStreamReader(istream));
+        StringBuilder strBuilder = new StringBuilder();
+        String line;
+        while ((line = buffReader.readLine()) != null ) {
+            strBuilder.append(line);
         }
 
-        // Cierra el BufferedReader
-        reader.close();
+        String jsonStr = strBuilder.toString();
+
+        System.out.println(jsonStr);
 
         // Convierte la cadena vacía en un objeto JSONArray
-        jsonArray = new JSONArray(stringBuilder.toString());
+        Gson gson = new Gson();
+        Populator.CategorizedPictosList pictos = gson.fromJson(jsonStr, Populator.CategorizedPictosList.class);
 
-        //devuelve el jsonArray
-        this.pictoCats = jsonArray;
+
+        this.pictoCats = pictos;
     }
 
 
-
-    public void crearCategoria(String nombre) throws JSONException {
+/*
+    public void crearCategoria( ArasaacModel.Pictogram p) throws JSONException {
         JSONObject nuevaCategoria = new JSONObject();
         int ultimoCat = 0;
         if (pictoCats.length() > 0) {
-            ultimoCat = pictoCats.getJSONObject(pictoCats.length() - 1).getInt("cat") + 1;
+            ultimoCat = pictoCats.getJSONObject(pictoCats.length() - 1).getInt("cat") +1;
         }
         try {
             nuevaCategoria.put("cat", ultimoCat);
-            nuevaCategoria.put("label", nombre);
-            nuevaCategoria.put("pictoId", 1234);
+            nuevaCategoria.put("label", p.keywords);
+            nuevaCategoria.put("pictoId", p.id);
             nuevaCategoria.put("drawable", "");
-            nuevaCategoria.put("ids", new JSONArray());
+            nuevaCategoria.put("ids", new JSONArray(p.id));
         } catch (JSONException e) {
             e.printStackTrace();
         }
         pictoCats.put(nuevaCategoria);
-    }
+    }*/
 }

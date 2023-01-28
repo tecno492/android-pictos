@@ -43,7 +43,7 @@ public class Populator {
         }
     }
 
-    private static class CategorizedPictosList {
+    public static class CategorizedPictosList {
         public List<CategorizedPictos> pictoCats;
 
         @Override

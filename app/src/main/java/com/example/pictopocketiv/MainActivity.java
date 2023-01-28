@@ -1,6 +1,7 @@
 package com.example.pictopocketiv;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -11,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -32,9 +35,12 @@ import com.example.pictopocketiv.forms.MsgFormFragment;
 import com.example.pictopocketiv.forms.SignupFormFragment;
 import com.example.pictopocketiv.forms.WaitingFragment;
 import com.example.pictopocketiv.localpersistence.LocalPersistenceService;
+import com.example.pictopocketiv.localpersistence.Populator;
 import com.example.pictopocketiv.states.MainActivityStateMV;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -255,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
         };
         // Wait to populate before go next state
         LocalPersistenceService.populateDB(
-                this,getPackageName(),"es",500, onDBPopulated);
+                this, getPackageName(),"es",500, onDBPopulated);
     }
 
     private void goError() {
@@ -263,6 +269,12 @@ public class MainActivity extends AppCompatActivity {
         setCustomizedError(ft);
         ft.addToBackStack(null);
         ft.commit();
+    }
+
+
+
+    public Context getContext () {
+        return this;
     }
 
     private void goWait() {

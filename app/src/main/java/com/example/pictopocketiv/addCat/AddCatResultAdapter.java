@@ -1,12 +1,8 @@
 package com.example.pictopocketiv.addCat;
 
 
-import android.content.Context;
-import android.content.res.AssetManager;
+import com.example.pictopocketiv.MainActivity;
 
-import com.google.gson.Gson;
-
-import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,13 +19,18 @@ import com.example.pictopocketiv.R;
 import com.example.pictopocketiv.arasaac.ArasaacModel;
 import com.example.pictopocketiv.arasaac.ArasaacService;
 import com.example.pictopocketiv.catalogs.PictosCategoriesAdapter;
+import com.example.pictopocketiv.localpersistence.Populator;
 
 import com.example.pictopocketiv.localpersistence.PictosPersistenceModel;
 
 
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.atomic.AtomicReference;
 
 
 public class AddCatResultAdapter extends RecyclerView.Adapter<AddCatResultAdapter.ResultViewHolder> {
@@ -114,9 +115,22 @@ public class AddCatResultAdapter extends RecyclerView.Adapter<AddCatResultAdapte
     }
 
     private void setListenersUI(@NonNull ResultViewHolder holder, int position) {
-
+        AtomicReference<Populator.CategorizedPictosList> a = new AtomicReference<>(new Populator.CategorizedPictosList());
         // ==== On Save
         holder.mSave.setOnClickListener(view -> {
+            ArasaacModel.Pictogram p = mResults.get(position);
+            System.out.println(p.id);
+            mActivity.getPackageName();
+
+            JsonManipulation Json = new JsonManipulation();
+            try {
+                Json.JsonFromFile("welcome_pictos_bundle.json", mActivity);
+                //Json.crearCategoria(p);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
 
             // ==== Opens category selection dialog
