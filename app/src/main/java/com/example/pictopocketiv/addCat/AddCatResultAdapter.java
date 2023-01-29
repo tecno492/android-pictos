@@ -124,52 +124,20 @@ public class AddCatResultAdapter extends RecyclerView.Adapter<AddCatResultAdapte
 
             JsonManipulation Json = new JsonManipulation();
             try {
-                Json.crearCat("welcome_pictos_bundle.json", mActivity, p);
+                Json.crearCat("welcome_pictos_bundle.json", mActivity, p, mLocale, 500, mActivity.getPackageName());
                 //Json.crearCategoria(p);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (JSONException e) {
                 e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
 
+            mActivity.finish();
 
-            // ==== Opens category selection dialog
-            /*
-            // Dialog Listener
-            AddCatCategoryDialogFragment.OnDialogListener onDialogListener =
-                    new AddCatCategoryDialogFragment.OnDialogListener() {
-
-                        // On category selected
-                        @Override
-                        public void onCategorySelected(int category) {
-
-                            // Obtains the selected pictogram
-                            ArasaacModel.Pictogram p = mResults.get(position);
-
-                            // Downloads the pictogram
-                            LocalPersistenceService.downloadAddPicto(p.id,
-                                    mLocale, mResolution, category,
-                                    mActivity.getPackageName());
-
-                            // Hide the dowload button
-                            holder.mSaveLayout.setVisibility(View.GONE);
-
-                            // Close the dialog
-                            mDialogFragment.dismiss();
-                        }
-
-                        @Override
-                        public void onCancel() {
-                            mDialogFragment.dismiss();
-                        }
-                    };
-
-            // Creates dialog
-            mDialogFragment = new AddCatCategoryDialogFragment(onDialogListener);
-            // Sets the dialog style
-            mDialogFragment.setStyle(DialogFragment.STYLE_NORMAL, R.style.customDialogStyle);
-            // Shows the dialog
-            mDialogFragment.show(mActivity.getSupportFragmentManager(),"");*/
         });
     }
 

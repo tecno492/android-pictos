@@ -120,6 +120,7 @@ public class LocalPersistenceService {
 
                     // try to store pictogram image //
                     // Task declaration
+                    // Task declaration
                     ImagesPersistenceService.StorePictoImageAsync storePictoImageAsync =
                             new ImagesPersistenceService.StorePictoImageAsync(
                                     null,pictoImg,pictoId, packageName);

@@ -81,6 +81,7 @@ public class PictosPersistenceModel {
         // Attrs
         @NonNull
         @PrimaryKey
+        public
         int id;
         @NonNull
         String label;
@@ -130,6 +131,9 @@ public class PictosPersistenceModel {
 
         @Query("SELECT COUNT(*) FROM pictos WHERE category = :category")
         int getPictosByCategoryCount(int category);
+
+        @Query("SELECT COUNT(id) FROM categoriesinfo")
+        int getCategoryCount();
 
         @Query("SELECT * FROM pictos WHERE id = :id")
         Picto getPictoById(int id);
