@@ -13,10 +13,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.ObjectOutputStream;
 
 
 public class JsonManipulation {
@@ -28,7 +30,7 @@ public class JsonManipulation {
         InputStream istream = null;
 
         // Crea una nueva instancia de File para el archivo JSON
-        istream = assman.open("welcome_pictos_bundle.json");
+        istream = assman.open(filePath);
 
         BufferedReader buffReader = new BufferedReader(new InputStreamReader(istream));
         StringBuilder strBuilder = new StringBuilder();
@@ -54,9 +56,15 @@ public class JsonManipulation {
         pictos.pictoCats.add(new_cat);
         System.out.println(pictos.pictoCats.get(pictos.pictoCats.size() - 1));
 
-        FileWriter writer = new FileWriter(filePath);
-        writer.write(String.valueOf(pictos));
-        writer.close();
+        try {
+            FileOutputStream fileOut = new FileOutputStream(filePath);
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(pictos.pictoCats);
+            out.close();
+            fileOut.close();
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
     }
 
 
