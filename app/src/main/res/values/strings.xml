@@ -4,7 +4,7 @@
     <string name="app_name">PictoPocket 0.1</string>
     <!-- Options menu -->
     <string name="close_sesion">Cerrar sesión</string>
-    <string name="open_sesion">Abrir sesión (fk)</string>
+    <string name="open_sesion">Reload</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="access_title">Accesso</string>

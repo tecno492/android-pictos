@@ -376,10 +376,8 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseAuthService.logout();
                 break;
             case R.id.app_opts_open_sesion:
-                if(FirebaseAuthService.getCurrentStatus()
-                        == FirebaseAuthService.FirebaseAuthState.LOGGED_OUT) {
-                    //openFakeSession();
-                }
+                // reload
+                goDBPopulation();
                 break;
         }
 
